@@ -2,9 +2,9 @@
 
 This repo contains the outputs of several tasks that I completed as part of an Udemy course to further improve my data querying, analysis and visualisation skills. Although the Udemy course, "SQL - MySQL for Data Analytics and Business Intelligence", uses MySQL, I have used PostgreSQL for my analysis and Tableau for the data visualisation. 
 
-Each task is explained below followed by the SQL query to wrangle the data, in order to answer the posed question and for data visualisation. 
+Each task is explained below followed by the SQL query to retrieve the relevant dataset from the database, in order to answer the posed question and for data visualisation. 
 
-Feel free to download and run the [employees_mod_postgresql.sql](employees_mod_postgresql.sql) file to create the database and its records. Note that this data is modified from the original MySQL Employee Sample Database. The other SQL files contain the same SQL queries as outlined below and the CSV files are the outputs of the queries, which are used for visualisation in Tableau. A screenshot of the data visualisation dashboard in Tableau is shown below and the interactive dashboard can be found at [Tableau Public](https://public.tableau.com/views/SQLTasks_15969830555650/Dashboard1?:language=en&:display_count=y&publish=yes&:origin=viz_share_link).
+Feel free to download and run the [employees_mod_postgresql.sql](employees_mod_postgresql.sql) file to create the database and its records. Note that this data is modified from the original MySQL Employee Sample Database. The other SQL files contain the same SQL queries as outlined below and the CSV files are the outputs of the queries, which are used to create understandable visualisations in Tableau. A screenshot of the data visualisation dashboard in Tableau is shown below and the interactive dashboard can be found at [Tableau Public](https://public.tableau.com/views/SQLTasks_15969830555650/Dashboard1?:language=en&:display_count=y&publish=yes&:origin=viz_share_link).
 
 [![Tableau Dashboard](Tableau_Dashboard.png "Tableau Dashboard")](https://public.tableau.com/views/SQLTasks_15969830555650/Dashboard1?:language=en&:display_count=y&publish=yes&:origin=viz_share_link)
 
@@ -60,7 +60,7 @@ ORDER BY b.emp_no, calendar_year;
 
 **Visualisation:**
 
-Bottom left chart on the [dashboard](https://public.tableau.com/views/SQLTasks_15969830555650/Dashboard1?:language=en&:display_count=y&publish=yes&:origin=viz_share_link), "Number of managers per department", shows that in 1990 that there were only 2 female managers and 8 male managers so only 20% of managers in the whole company were female. The number of female managers gradually increased over time and reached a peak of 44 managers in 1996 and 1997 with proportion of 41% and 40% respectively of total managers. To check out the breakdown for specific departments, you can use the department filter on the right hand side of the interactive dashboard. This will also change the charts for the right hand side chart as well. 
+Bottom left chart on the [dashboard](https://public.tableau.com/views/SQLTasks_15969830555650/Dashboard1?:language=en&:display_count=y&publish=yes&:origin=viz_share_link), "Number of managers per department", shows that in 1990 that there were only 2 female managers and 8 male managers so only 20% of managers in the whole company were female. The number of female managers gradually increased over time and reached a peak of 44 managers in 1996 and 1997 with proportion of 41% and 40% respectively of total managers. To check out the breakdown for specific departments, you can use the department filter on the right hand side of the interactive dashboard. This will also change the right hand side charts as well. 
 
 ## Task 3
 **Request:** 
@@ -87,7 +87,7 @@ ORDER BY d.dept_no
 
 **Visualisation:**
 
-Top right chart on the [dashboard](https://public.tableau.com/views/SQLTasks_15969830555650/Dashboard1?:language=en&:display_count=y&publish=yes&:origin=viz_share_link), "Average annual employee salary", shows that the salaries, on the whole, have been increasing constantly for any department over the time period. Furthermore, male and female employees' average salaries were similar until 1993, and thereafter, male employees earned more per year than female employees.
+Top right chart on the [dashboard](https://public.tableau.com/views/SQLTasks_15969830555650/Dashboard1?:language=en&:display_count=y&publish=yes&:origin=viz_share_link), "Average annual employee salary", shows that the salaries, on the whole, have been increasing constantly for any department over the time period. Furthermore, male and female employees' average salaries were similar until 1993, and thereafter, male employees earned more per year than female employees. To check out the breakdown for specific departments, you can use the department filter on the right hand side of the interactive dashboard. This will also change the bottom charts as well.
 
 ## Task 4
 **Request:** 
@@ -122,4 +122,4 @@ SELECT * FROM filter_salary(50000, 90000);
 
 **Visualisation:**
 
-Bottom right chart on the [dashboard](https://public.tableau.com/views/SQLTasks_15969830555650/Dashboard1?:language=en&:display_count=y&publish=yes&:origin=viz_share_link), "A breakdown between male and female employees", shows the average male and female salary per department within the range $50,000 and $90,000. It appears that Sales, Marketing and Finance had the highest average salaries since 1990.
+Bottom right chart on the [dashboard](https://public.tableau.com/views/SQLTasks_15969830555650/Dashboard1?:language=en&:display_count=y&publish=yes&:origin=viz_share_link), "Average employee salary (since 1990)", shows the average male and female salary per department within the range $50,000 and $90,000. It appears that Sales, Marketing and Finance had the highest average salaries since 1990. To check out the breakdown in more detail for specific departments, you can use the department filter on the right hand side of the interactive dashboard. This will also change the bottom left and top right charts as well.
